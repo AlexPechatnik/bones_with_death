@@ -22,12 +22,12 @@ while (p > 0)
     Random rnd = new Random();// Ставка смерти
     int numB = rnd.Next(1, 7);
     Console.WriteLine("Число смерти " + numB);
-    Random rnс = new Random();// Кости
-    int numC = rnс.Next(1, 7);
+    Random rnc = new Random();// Кости
+    int numC = rnc.Next(1, 2);
     Console.WriteLine("Кости " + numC);
     if (numA == numB)
     {
-        Console.Write("Смерть: хм... давай еще раз ");
+        Console.WriteLine("Смерть: хм... давай еще раз ");
 
     }
     if (numA == numC)
@@ -50,6 +50,8 @@ while (p > 0)
     if (d == 0 )
     {
         Console.WriteLine("Смерть: Ты победил, и ты свободен, но помни, я всегда рядом...");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Вздрогнув, ты проснулся. Всматриваясь в окружение ты обнаружил, что заснул лицом на клваиатуре. Встав из-за компьютера ты подтянулся, жадно зевнул и вроде бы было, что-то важное, но звонок телефона стер все обрывки памяти...Ало..");
         return;
     }  
 }
