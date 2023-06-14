@@ -20,14 +20,15 @@ while (p > 0)
     int numA = int.Parse(Console.ReadLine());
 
     Random rnd = new Random();// Ставка смерти
-    int numB = rnd.Next(1, 7);
+    int numB = rnd.Next(1, 2);
     Console.WriteLine("Число смерти " + numB);
     Random rnс = new Random();// Кости
-    int numC = rnс.Next(1, 7);
+    int numC = rnс.Next(1, 2);
     Console.WriteLine("Кости " + numC);
     if (numA == numB)
     {
-        Console.Write("ничья ");
+        Console.Write("Смерть: ничья ");
+
     }
     if (numA == numC)
     {
@@ -52,6 +53,8 @@ while (p > 0)
         return;
     }  
 }
+Console.ForegroundColor = ConsoleColor.Red; // Такая команда меняет цвет строки.
 Console.WriteLine("Смерть: Идем со мной, нас уже заждались...");
+Console.WriteLine("Ты ушел во тьму и даже не заметил, как растворился в ней и стал ее частью...");
 
 
