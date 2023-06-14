@@ -7,7 +7,7 @@ Console.WriteLine("______________________rules of the game____________________ "
 Console.WriteLine("Смерть: У тебя есть 3 очка, 3 добрых поступков, ты можешь сыграть со мной в игру, если победишь ты, я отпущу тебя и все что тут было ты забудешь как страшный сон, но если выйгрую я, твоя душа пойдет со мной, и да выбора у тебя нет");
 int p = 3;// Ваши очки
 int d = 3;// Очки смерти
-Console.WriteLine("Смерть: Введи число от 1 до 6 и есил ваше число совпало с кубиком, +1 очко ");
+Console.WriteLine("Смерть: Введи число от 1 до 6 и если твое число совпало с кубиком, +1 очко ");
 
 while (p > 0)
 {   
@@ -20,14 +20,14 @@ while (p > 0)
     int numA = int.Parse(Console.ReadLine());
 
     Random rnd = new Random();// Ставка смерти
-    int numB = rnd.Next(1, 2);
+    int numB = rnd.Next(1, 7);
     Console.WriteLine("Число смерти " + numB);
     Random rnс = new Random();// Кости
-    int numC = rnс.Next(1, 2);
+    int numC = rnс.Next(1, 7);
     Console.WriteLine("Кости " + numC);
     if (numA == numB)
     {
-        Console.Write("Смерть: ничья ");
+        Console.Write("Смерть: хм... давай еще раз ");
 
     }
     if (numA == numC)
